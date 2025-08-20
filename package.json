@@ -1,18 +1,18 @@
 {
-  "name": "@playwright/mcp",
-  "version": "0.0.34",
-  "description": "Playwright Tools for MCP",
+  "name": "@skillshop/playwright-mcp",
+  "version": "0.0.36",
+  "description": "Skillshop Fork of Playwright Tools for MCP",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/microsoft/playwright-mcp.git"
+    "url": "git+https://github.com/lukmanr/playwright-mcp.git"
   },
   "homepage": "https://playwright.dev",
   "engines": {
     "node": ">=18"
   },
   "author": {
-    "name": "Microsoft Corporation"
+    "name": "Microsoft Corporation and Skillshop"
   },
   "license": "Apache-2.0",
   "scripts": {
@@ -26,7 +26,7 @@
     "ctest": "playwright test --project=chrome",
     "ftest": "playwright test --project=firefox",
     "wtest": "playwright test --project=webkit",
-    "run-server": "node lib/browserServer.js",
+    "run-server": "node lib/program.js",
     "clean": "rm -rf lib",
     "npm-publish": "npm run clean && npm run build && npm run test && npm publish"
   },
