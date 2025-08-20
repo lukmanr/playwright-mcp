@@ -1,6 +1,6 @@
 {
   "name": "@skillshop/playwright-mcp",
-  "version": "0.0.36",
+  "version": "0.0.35",
   "description": "Skillshop Fork of Playwright Tools for MCP",
   "type": "module",
   "repository": {
