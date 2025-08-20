@@ -572,7 +572,7 @@ http.createServer(async (req, res) => {
 
 - **browser_take_screenshot**
   - Title: Take a screenshot
-  - Description: Take a screenshot of the current page. You can't perform actions based on the screenshot, use browser_snapshot for actions.
+  - Description: Take a screenshot of the current page.
   - Parameters:
     - `type` (string, optional): Image format for the screenshot. Default is png.
     - `filename` (string, optional): File name to save the screenshot to. Defaults to `page-{timestamp}.{png|jpeg}` if not specified.

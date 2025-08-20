@@ -45,7 +45,7 @@ const screenshot = defineTabTool({
   schema: {
     name: 'browser_take_screenshot',
     title: 'Take a screenshot',
-    description: `Take a screenshot of the current page. You can't perform actions based on the screenshot, use browser_snapshot for actions.`,
+    description: `Take a screenshot of the current page.`,
     inputSchema: screenshotSchema,
     type: 'readOnly',
   },
@@ -76,14 +76,10 @@ const screenshot = defineTabTool({
     const buffer = locator ? await locator.screenshot(options) : await tab.page.screenshot(options);
     response.addResult(`Took the ${screenshotTarget} screenshot and saved it as ${fileName}`);
 
-    // https://github.com/microsoft/playwright-mcp/issues/817
-    // Never return large images to LLM, saving them to the file system is enough.
-    if (!params.fullPage) {
-      response.addImage({
-        contentType: fileType === 'png' ? 'image/png' : 'image/jpeg',
-        data: buffer
-      });
-    }
+    response.addImage({
+      contentType: fileType === 'png' ? 'image/png' : 'image/jpeg',
+      data: buffer
+    });
   }
 });
 
